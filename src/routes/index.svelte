@@ -6,7 +6,7 @@
         const loadedPokemon = data.results.map((data, index) => {
             return {
                 name: data.name,
-                id: data.id,
+                id: index+1,
                 image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index+1}.png`,
             };
         });
@@ -15,12 +15,12 @@
 </script>
 
 <script>
+    import PokemanCard from "../components/pokemanCard.svelte"
     export let pokemon;
-    console.log(pokemon)
 </script>
 
 <h1>My Sveltekit Pokedex</h1>
 
 {#each pokemon as pokeman}
-<p>{pokeman.name}</p>
+<PokemanCard pokeman={pokeman}/>
 {/each}
