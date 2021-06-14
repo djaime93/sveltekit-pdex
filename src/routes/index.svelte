@@ -19,8 +19,10 @@
     export let pokemon;
 </script>
 
-<h1>My Sveltekit Pokedex</h1>
+<h1 class="text-4xl text-center my-8 uppercase">My Sveltekit Pokedex</h1>
 
-{#each pokemon as pokeman}
-<PokemanCard pokeman={pokeman}/>
-{/each}
+<div class="py-4 grid gap-4 md:grid-cols-2 grid-cols-1">
+    {#each pokemon as pokeman}
+    <PokemanCard pokeman={pokeman}/>
+    {/each}    
+</div>
