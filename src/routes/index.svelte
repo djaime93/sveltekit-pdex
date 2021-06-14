@@ -15,8 +15,12 @@
 </script>
 
 <script>
-    export let pokemon
+    export let pokemon;
     console.log(pokemon)
 </script>
 
 <h1>My Sveltekit Pokedex</h1>
+
+{#each pokemon as pokeman}
+<p>{pokeman.name}</p>
+{/each}
