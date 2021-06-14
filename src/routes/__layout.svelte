@@ -1,4 +1,8 @@
+<script>
+    import Nav from "../components/nav.svelte"
+</script>
 <div>
+    <Nav/>
     <slot></slot>
 </div>
 <style>
